@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Marks
+comment0.text=\n\ Write\ a\ description\ of\ class\ Marks\ here.\n\n\ @author\ (David\ Penaloza)\n\ @version\ (V1.0)\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Marks\n
+numComments=2
