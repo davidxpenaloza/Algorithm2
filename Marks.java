@@ -15,7 +15,7 @@ public class Marks
      */
     public static void main(String[] args)
     {
-        int numberOfStudents = 30;
+        int numberOfStudents = 5;
         float[] mark = new float[numberOfStudents];
         Scanner scanner = new Scanner(System.in);
         
@@ -36,11 +36,11 @@ public class Marks
 
             do{
                 temp = scanner.nextFloat();
-                if(temp<0 || temp>30){
-                   
-                    System.out.println("Invalide marks,please enter again");    
+                if(temp<0 || temp>5){
+
+                   System.out.println("Invalide marks,please enter again");    
                 }
-                } while (temp<0 || temp>30);
+                } while (temp<0 || temp>5);
                 mark[i] = temp;
             
             }
@@ -53,28 +53,21 @@ public class Marks
         
         //Calculate the mean (average)
         float total = 0;
-        for(int i = 0; i<numberOfStudents; i++){
-            total = total + mark[i];
+        for(int j = 0; j<numberOfStudents; j++){
+            total = total + mark[j];
         
         }
-        float mean =0;
+        float mean;
         mean = total / numberOfStudents;
         
-        //Calculate standard deviation
-        float sumdiff;
-        for(int i =0; i<numberOfStudents; i++) {
-            sumdiff = (mark[i]-mean)*(mark[i]-mean);
-            sumdiff = sumdiff / numberOfStudents;
-            //System.out.println(sumdiff);
-        
-        }
         float totalsumdiff =0;
-        for(int i = 0; i<numberOfStudents; i++){
-            totalsumdiff = totalsumdiff + (mark[i]-mean)*(mark[i]-mean)/numberOfStudents;
+        for(int t = 0; t<numberOfStudents; t++){
+            totalsumdiff = totalsumdiff + (mark[t]-mean)*(mark[t]-mean)/numberOfStudents;
         
         }
         
-        float standardDeviation = (float) Math.sqrt(totalsumdiff / (numberOfStudents-1));
+        float standardDeviation;
+        standardDeviation = (float) Math.sqrt(totalsumdiff / (numberOfStudents-1));
         
         System.out.println("\nAssignment Name: "+ assignmentName);
         System.out.println("The mean value of total Mark is: " + mean);
