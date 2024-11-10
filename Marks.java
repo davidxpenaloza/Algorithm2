@@ -15,7 +15,7 @@ public class Marks
      */
     public static void main(String[] args)
     {
-        int numberOfStudents = 5;
+        int numberOfStudents = 30;
         float[] mark = new float[numberOfStudents];
         Scanner scanner = new Scanner(System.in);
         
@@ -25,22 +25,18 @@ public class Marks
         System.out.println("Enter the assignment name: ");
         String assignmentName = scanner.nextLine();
         System.out.println("Enter the marks: \n");
-        //Code for avoid the loop from the use the sentence "continue". 
-        //The user needs to write the adequate value. When users execute the true value according the problem condition. 
-        //Then, they can entered the next value. Otherwise a message will be displayed: "invalide mark, please enter again"
-        
-        //Get marks from the user with validation
+      
         for(int i=0; i<numberOfStudents; i++){
             
             float temp;
 
             do{
                 temp = scanner.nextFloat();
-                if(temp<0 || temp>5){
+                if(temp<0 || temp>30){
 
                    System.out.println("Invalide marks,please enter again");    
                 }
-                } while (temp<0 || temp>5);
+                } while (temp<0 || temp>30);
                 mark[i] = temp;
             
             }
@@ -51,7 +47,7 @@ public class Marks
             
         }
         
-        //Calculate the mean (average)
+        //Calculate t markshe mean (average)
         float total = 0;
         for(int j = 0; j<numberOfStudents; j++){
             total = total + mark[j];
